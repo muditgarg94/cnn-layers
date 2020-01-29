@@ -12,9 +12,10 @@ function dzdx=back_meanpool(x,y,dzdy)
 tmp=0.25.*dzdy(:);
 
 % creating a new array that contains the derivative values column wise
-new_array=zeros(size(x));
-for i=1:size(tmp,1)
-    new_array(:,i)=tmp(i);
+for i=1:4
+    for j=1:size(tmp,1)
+        new_array(i,j)=tmp(j);
+    end
 end
 
 %converting new array into an image of size [2m 2n]
