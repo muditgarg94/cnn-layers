@@ -14,5 +14,13 @@
 function [dzdx,dzdw,dzdb]=back_fc(x,w,b,y,dzdy)
 
 
+dzdx=dzdy.*w;
+
+
+dzdw=dzdy.*x;
+
+
+% dydb =1. Thus, dzdb is the sum of all elements of dzdy
+dzdb=sum(sum(dzdy));
 
 return

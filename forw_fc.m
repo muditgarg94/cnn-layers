@@ -9,7 +9,7 @@
 
 function y=forw_fc(x,w,b)
 
-y=sum(sum(x.*w))+b;
+y=dot(x(:),w(:))+b;
 
 return
 
